@@ -22,7 +22,7 @@ public class NameService {
      * @param fullName - a name containing a first name and a last name
      * @return the last name in the form of [LAST_NAME_IDX]
      */
-    public String extractLastName(String fullName) {
+    public final String extractLastName(String fullName) {
         
          if (fullName == null || fullName.isEmpty()) {
             throw new IllegalArgumentException("Name cannot be null, please try again");
@@ -49,7 +49,7 @@ public class NameService {
      * @param fullName - a name containing a first name and a last name
      * @return the first name in the form of [FIRST_NAME_IDX]
      */
-    public String extractFirstName(String fullName) {
+    public final String extractFirstName(String fullName) {
         
         if (fullName == null || fullName.isEmpty()) {
             throw new IllegalArgumentException("Name cannot be null, please try again");
@@ -67,7 +67,7 @@ public class NameService {
      * @return the length of the name or part. by combining [FIRST_NAME_IDX] and
      * [LAST_NAME_IDX]
      */
-    public int getNameLength(String name) {
+    public final int getNameLength(String name) {
 
         String[] nameParts = name.split(" ");
         

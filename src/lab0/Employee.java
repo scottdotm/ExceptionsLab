@@ -87,7 +87,7 @@ public class Employee {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public final void setLastName(String lastName) {
         if (lastName == null){
             throw new IllegalArgumentException("Last name cannot be empty or null");
         } else {

@@ -27,7 +27,7 @@ public class Challenge1 {
         JOptionPane.showMessageDialog(null, msg);
     }
     
-    public String extractLastName(String fullName) throws IllegalArgumentException {
+    public final String extractLastName(String fullName) throws IllegalArgumentException {
         if (fullName == null || fullName.isEmpty()){
             throw new IllegalArgumentException("Name cannot be Null or Empty, try again");
         }
