@@ -22,6 +22,7 @@ public class NameService {
      * @param fullName - a name containing a first name and a last name
      * @return the last name in the form of [LAST_NAME_IDX]
      */
+    
     public final String extractLastName(String fullName) {
         
          if (fullName == null || fullName.isEmpty()) {
@@ -32,8 +33,8 @@ public class NameService {
         String lastPart = nameParts[LAST_NAME_IDX];
         
         //First and last name required, no more than 4 names
-        if (nameParts.length > 3 || nameParts.length <= 1) {
-            throw new IllegalArgumentException("Must have at least a first and a last name and no more than 3 names");
+        if (nameParts.length > 2 || nameParts.length <= 1) {
+            throw new IllegalArgumentException("Must have at least a first and a last name and no more than 2 names");
 
         //could be more options for suffix's
         } else if (lastPart.contains("jr.")|| lastPart.contains("jr")||lastPart.contains("sr")||lastPart.contains("sr.")||lastPart.contains("ii")||lastPart.contains("iii")){
@@ -72,8 +73,8 @@ public class NameService {
 
         String[] nameParts = name.split(" ");
         
-        if (nameParts.length > 3 || nameParts.length <= 1) {
-            throw new IllegalArgumentException("Must have at least a first and a last name and no more than 3 names");
+        if (nameParts.length > 2 || nameParts.length <= 1) {
+            throw new IllegalArgumentException("Must have at least a first and a last name and no more than 2 names");
         }
         
         return name.length();
