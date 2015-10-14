@@ -22,7 +22,7 @@ import java.util.Date;
  * @version 1.00
  */
 public class Employee {
-    SimpleDateFormat fmt = new SimpleDateFormat("MM-dd-yyyy");
+    SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy");
     
     public static final int MAX_VACATION_DAYS = 28;
     private String firstName;
@@ -77,8 +77,8 @@ public class Employee {
     }
 
     public final void setHireDate(Date hireDate) throws ParseException {
-        if (hireDate.before(fmt.parse("04-10-2010")) || hireDate.after(today) ){
-        throw new IllegalArgumentException("Employee cannot be hired before the company was founded, or be a future date.");
+        if (hireDate.before(format.parse("04-10-2010")) || hireDate.after(today) ){
+        throw new IllegalArgumentException("Employee cannot be hired before the company was founded, or be hired from the future, unless you know time travel.");
     }
         this.hireDate = hireDate;
     }

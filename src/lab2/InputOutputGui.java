@@ -8,14 +8,14 @@ import javax.swing.JOptionPane;
  * @author  Jim Lombardo, jlombardo@wctc.edu
  * @version 1.00
  */
-public class InputOutputGui {
+public final class InputOutputGui {
     private NameService nameService;
 
     public InputOutputGui() {
         nameService = new NameService();
     }
 
-    public void startConversation() {
+    public final void startConversation() {
         
         String fullName = JOptionPane.showInputDialog("Enter full name:");
         String lastName = "";
