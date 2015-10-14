@@ -39,9 +39,10 @@ public class NameService {
         //could be more options for suffix's
         } else if (lastPart.contains("jr.")|| lastPart.contains("jr")||lastPart.contains("sr")||lastPart.contains("sr.")||lastPart.contains("ii")||lastPart.contains("iii")){
             throw new IllegalArgumentException("Please do not add suffix to last name, please try again");
-        }
+        } else {
         
         return nameParts[LAST_NAME_IDX];
+        }
     }
     
     /**
