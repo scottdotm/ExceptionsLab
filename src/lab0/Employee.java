@@ -53,8 +53,8 @@ public class Employee {
     }
 
     public final void setDaysVacation(int daysVacation) throws IllegalArgumentException {
-        if (daysVacation<-10||daysVacation>30){
-            throw new IllegalArgumentException("Sorry vacation days must be between -10 and 30");
+        if (daysVacation<-30||daysVacation>30){
+            throw new IllegalArgumentException("Sorry vacation days must be between -30 and 30");
         } else {
         this.daysVacation = daysVacation;
         }
