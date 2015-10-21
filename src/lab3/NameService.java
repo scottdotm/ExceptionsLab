@@ -17,10 +17,16 @@ public class NameService {
      * 
      * @param fullName - a name containing a first name and a last name
      * @return the last name
+     * @throws lab3.NameOutOfRangeException
      */
-    public String extractLastName(String fullName) {
+    public String extractLastName(String fullName) throws NameOutOfRangeException {
+        if (fullName == null || fullName.isEmpty()) {
+            //This passed Exception will not be displayed, the message within the NameOutOfRangeException class will be displayed (used this as proof)
+            throw new NameOutOfRangeException("Name cannot be null, please try again");
+        } else {
         String[] nameParts = fullName.split(" ");
         return nameParts[LAST_NAME_IDX];
+        }
     }
     
     /**
@@ -30,9 +36,13 @@ public class NameService {
      * @param fullName - a name containing a first name and a last name
      * @return the first name
      */
-    public String extractFirstName(String fullName) {
+    public String extractFirstName(String fullName) throws NameOutOfRangeException {
+        if (fullName == null || fullName.isEmpty()) {
+            throw new NameOutOfRangeException("Name cannot be null, please try again");
+        } else {
         String[] nameParts = fullName.split(" ");
         return nameParts[FIRST_NAME_IDX];
+        }
     }
 
     /**
